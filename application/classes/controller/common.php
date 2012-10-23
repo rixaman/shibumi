@@ -8,5 +8,7 @@ abstract class Controller_Common extends Controller_Template {
 		$this->template->navigation = View::factory('navigation');
 			$this->template->navigation->brand = "Привет";
 		$this->template->footer = View::factory('footer');
+		// создаём модель айтемов меню
+		$this->template->items = ORM::factory('item')->find_all();
 	}
 } // End Welcome

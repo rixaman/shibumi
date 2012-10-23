@@ -21,6 +21,10 @@
 		<?= $footer; ?>
 	</footer>
 </div>
+<? foreach($items as $item)
+{
+    echo $item->title .'<br />';
+} ?>
 </body>
 <br><br><br><br><br><br><br><br><br><br>
 </html>

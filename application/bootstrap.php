@@ -22,7 +22,7 @@ else
  * @link http://kohanaframework.org/guide/using.configuration
  * @link http://www.php.net/manual/timezones
  */
-date_default_timezone_set('America/Chicago');
+date_default_timezone_set('Asia/Yekaterinburg');
 
 /**
  * Set the default locale.
@@ -84,8 +84,7 @@ if (isset($_SERVER['KOHANA_ENV']))
  */
 Kohana::init(array(
         'base_url'   => '/',
-        'index_file' => FALSE,
-		'caching'	 => Kohana::$environment === Kohana::PRODUCTION, // Кеширование только для production
+        'index_file' => FALSE
 ));
 
 /**

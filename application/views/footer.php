@@ -14,8 +14,7 @@
 		</div>
 		<div class="span4">
 		  <div class="alert alert-info">
-		    <a class="close">×</a>
-		    <strong>Information</strong> This alert needs your attention, but it's not super important.
+		  	 <a href="<?php echo URL::site('admin'); ?>"><i class="icon-user"></i></a><br>Разработано хорошими людьми
 		  </div>
 		</div>
 	</div>

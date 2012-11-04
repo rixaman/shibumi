@@ -1,11 +1,6 @@
 <?php defined('SYSPATH') or die('No direct access allowed.');
-class Controller_Admin_Item extends Controller_Common{
-	public function action_index()
-	{
-		$this->template->title = "Item";
-		$this->template->content = "test";
-		$this->template->navigation->active = 'item';
-	}
+class Controller_Admin_Page extends Controller_Admin_Admin{
+
 	public function action_create()
 	{
 		$this->template->navigation->active = 'item';
@@ -28,5 +23,16 @@ class Controller_Admin_Item extends Controller_Common{
 			->bind('errors', $errors);
 
 		$this->template->content = $content;
+	}
+	public function action_items()
+	{
+        $this->template->title = "Каталог";
+		$this->template->navigation->active = 'items';
+
+		$items = ORM::factory('item')->find_all(); 
+
+		$content = View::factory('catalog')
+			->bind('items', $items);
+		$this->template->content = $content; 
 	}
 }

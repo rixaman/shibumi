@@ -103,7 +103,7 @@ Cookie::$salt = '112358132127';
  * Enable modules. Modules are referenced by a relative or absolute path.
  */
 Kohana::modules(array(
-	// 'auth'       => MODPATH.'auth',       // Basic authentication
+	'auth'       => MODPATH.'auth',       // Basic authentication
 	'cache'      => MODPATH.'cache',      // Caching with multiple backends
 	// 'codebench'  => MODPATH.'codebench',  // Benchmarking tool
 	'database'   => MODPATH.'database',   // Database access
@@ -138,11 +138,23 @@ Route::set('catalog', 'catalog')
             'controller' => 'page',
             'action'     => 'catalog',
 	));
-Route::set('add_item', '<directory>(/<controller>(/<action>))')
+Route::set('add_item', 'admin/page/create')
 	->defaults(array(
     		'directory'  => 'admin',
-            'controller' => 'item',
+            'controller' => 'page',
             'action'     => 'create',
+	));
+Route::set('items', 'admin/items')
+	->defaults(array(
+    		'directory'  => 'admin',
+            'controller' => 'page',
+            'action'     => 'items',
+	));
+Route::set('admin', 'admin')
+	->defaults(array(
+    		'directory'  => 'admin',
+            'controller' => 'admin',
+            'action'     => 'index',
 	));
 Route::set('default', '(<controller>(/<action>(/<id>)))')
 	->defaults(array(

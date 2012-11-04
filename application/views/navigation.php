@@ -24,9 +24,6 @@
           <li <?= (($active === 'contacts') ? 'class="active"' : NULL); ?>>
               <a href="<?php echo URL::site('contacts'); ?>">Контакты</a>
           </li>
-          <li <?= (($active === 'item') ? 'class="active"' : NULL); ?>>
-              <a href="<?php echo URL::site('admin/item/create'); ?>">Добавить вкусняшку</a>
-          </li>
         </ul>
       </div><!--/.nav-collapse -->
     </div>

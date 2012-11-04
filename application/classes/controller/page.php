@@ -24,10 +24,17 @@ class Controller_Page extends Controller_Common {
 
 	public function action_health()
 	{
-		$this->template->title = "О пользе";
-		$this->template->navigation->active = 'health';
+		$page = ORM::factory('page');
+		$page->where('name', '=', 'health')->find();
+		$title = $page->title;
+		$description = $page->description;
 
-		$this->template->content = View::factory('health');		
+		$this->template->title = $title;
+		$this->template->navigation->active = $page->name;
+
+		$content = View::factory('page')
+			->bind('description', $description);
+		$this->template->content = $content; 		
 	}
 
 	public function action_about()
@@ -38,18 +45,25 @@ class Controller_Page extends Controller_Common {
 		$description = $page->description;
 
 		$this->template->title = $title;
-		$this->template->navigation->active = 'about';
+		$this->template->navigation->active = $page->name;
 
-		$content = View::factory('about')
+		$content = View::factory('page')
 			->bind('description', $description);
 		$this->template->content = $content; 
 	}
 
 	public function action_contacts()
 	{
-		$this->template->title = "Контакты";
-		$this->template->navigation->active = 'contacts';
+		$page = ORM::factory('page');
+		$page->where('name', '=', 'contacts')->find();
+		$title = $page->title;
+		$description = $page->description;
 
-		$this->template->content = View::factory('contacts');	
+		$this->template->title = $title;
+		$this->template->navigation->active = $page->name;
+
+		$content = View::factory('page')
+			->bind('description', $description);
+		$this->template->content = $content; 	
 	}
 } // End Welcome

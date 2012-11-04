@@ -6,7 +6,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </a>
-      <a class="brand" href="#"><?= $brand; ?></a>
+      <a class="brand" href="<?= URL::site('admin'); ?>"><?= $brand; ?></a>
       <div class="nav-collapse collapse">
         <ul class="nav">
           <li <?= (($active === '/') ? 'class="active"' : NULL); ?>>

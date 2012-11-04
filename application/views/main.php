@@ -1,4 +1,4 @@
-<div class="hero-unit">
+<div class="hero-unit focus-shadow">
 	<div class="row">
 		<div class="span4">
 			<h2>Nirvana</h2>

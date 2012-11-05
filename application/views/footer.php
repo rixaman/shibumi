@@ -3,18 +3,18 @@
 		<div class="span4">
 		  <div class="alert alert-error">
 		    <a class="close">×</a>
-		    <strong>Error</strong> Change a few things up and try submitting again.
+		    <p><?= $address; ?></p>
 		  </div>
 		</div>
 		<div class="span4">
 		  <div class="alert alert-success">
 		    <a class="close">×</a>
-		    <strong>Success</strong> You successfully read this important alert message.
+		    <p><?= $marketing; ?></p>
 		  </div>
 		</div>
 		<div class="span4">
 		  <div class="alert alert-info">
-		  	 <a href="<?php echo URL::site('admin'); ?>"><i class="icon-user"></i></a><br>Разработано хорошими людьми
+		  	 <p><?= $phones; ?></p>
 		  </div>
 		</div>
 	</div>

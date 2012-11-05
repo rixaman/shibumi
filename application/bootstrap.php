@@ -150,6 +150,12 @@ Route::set('items', 'admin/items')
             'controller' => 'page',
             'action'     => 'items',
 	));
+Route::set('section', 'admin/section')
+	->defaults(array(
+    		'directory'  => 'admin',
+            'controller' => 'page',
+            'action'     => 'section',
+	));
 Route::set('admin', 'admin')
 	->defaults(array(
     		'directory'  => 'admin',

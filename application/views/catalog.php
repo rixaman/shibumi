@@ -4,7 +4,7 @@
 			<div class="well focus-shadow">
 				<h2><?= $item->title; ?></h2>
 				<img src="<?=$item->image?>" class="img-circle" width="240" height="202"><br><br>
-				<p><?= $item->content; ?></p>
+				<p><?= $item->description; ?></p>
 			</div>
 		</div>
 	<? endforeach; ?>

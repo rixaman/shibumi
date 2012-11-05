@@ -15,9 +15,6 @@
           <li <?= (($active === 'catalog') ? 'class="active"' : NULL); ?>>
               <a href="<?php echo URL::site('catalog'); ?>">Меню</a>
           </li>
-          <li <?= (($active === 'health') ? 'class="active"' : NULL); ?>>
-              <a href="<?php echo URL::site('health'); ?>">О пользе</a>
-          </li>
           <li <?= (($active === 'about') ? 'class="active"' : NULL); ?>>
               <a href="<?php echo URL::site('about'); ?>">О кафе</a>
           </li>

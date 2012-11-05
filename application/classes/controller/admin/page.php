@@ -1,6 +1,7 @@
 <?php defined('SYSPATH') or die('No direct access allowed.');
 class Controller_Admin_Page extends Controller_Admin_Admin{
 
+	// создание айтема
 	public function action_create()
 	{
 		$this->template->navigation->active = 'item';
@@ -24,6 +25,8 @@ class Controller_Admin_Page extends Controller_Admin_Admin{
 
 		$this->template->content = $content;
 	}
+
+	// вывод списка каталога по копипасту с основного временно
 	public function action_items()
 	{
         $this->template->title = "Каталог";
@@ -33,6 +36,19 @@ class Controller_Admin_Page extends Controller_Admin_Admin{
 
 		$content = View::factory('catalog')
 			->bind('items', $items);
+		$this->template->content = $content; 
+	}
+
+	// секции
+	public function action_section()
+	{
+        $this->template->title = "Секции";
+		$this->template->navigation->active = 'section';
+
+		$sections = ORM::factory('page')->find_all(); 
+
+		$content = View::factory('admin/section')
+			->bind('sections', $sections);
 		$this->template->content = $content; 
 	}
 }

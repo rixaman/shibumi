@@ -17,6 +17,9 @@
           <li <?= (($active === 'item') ? 'class="active"' : NULL); ?>>
               <a href="<?php echo URL::site('admin/page/create'); ?>">Добавить вкусняшку</a>
           </li>
+          <li <?= (($active === 'section') ? 'class="active"' : NULL); ?>>
+              <a href="<?php echo URL::site('admin/section'); ?>">Секции</a>
+          </li>
         </ul>
       </div><!--/.nav-collapse -->
     </div>

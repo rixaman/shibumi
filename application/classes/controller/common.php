@@ -18,6 +18,6 @@ abstract class Controller_Common extends Controller_Template {
 		$bootstrap = Less::compile('bootstrap');
 		//стили и скрипты
 		$this->template->styles = array($bootstrap, '/public/css/styles.css');
-        $this->template->scripts = array('/public/js/jquery-1.8.2.min.js', '/public/js/scripts.js');
+        $this->template->scripts = array('/public/js/jquery-1.8.2.min.js', '/public/js/bootstrap-carousel.js', '/public/js/scripts.js');
 	}
 }

@@ -10,13 +10,7 @@
 				</script>				
 			</div>
 		</div>
-		<div class="span4">
-		  <div class="alert alert-success focus-shadow">
-		    <a class="close">×</a>
-		    <p><?= $marketing; ?></p>
-		  </div>
-		</div>
-		<div class="span4">
+		<div class="span8">
 		  <div class="alert alert-info focus-shadow">
 		    <a class="close">×</a>
 		  	<h3>Горячая линия:</h3>

@@ -1,4 +1,4 @@
-<?= Form::open('/admin/item', array('id'=>'form_item', 'class'=>'form-horizontal')) ?>
+<?= Form::open('/admin/page/create', array('id'=>'form_item', 'class'=>'form-horizontal')) ?>
 	<div class="control-group <?= isset($errors['title']) ? 'error' : '' ?>">
 		<label class="control-label" for="title">Название</label>
 		<div class="controls">
@@ -13,11 +13,11 @@
 			<span class="help-inline"><?= isset($errors['price']) ? $errors['price'] : ''; ?></span>
 		</div>
 	</div>
-	<div class="control-group <?= isset($errors['content']) ? 'error' : '' ?>">
-		<label class="control-label" for="content">Описание</label>
+	<div class="control-group <?= isset($errors['description']) ? 'error' : '' ?>">
+		<label class="control-label" for="description">Описание</label>
 		<div class="controls">
-			<?= Form::textarea('content', $post['content'], array('placeholder'=>'вкусно очень', 'id'=>'content')); ?>
-			<span class="help-inline"><?= isset($errors['content']) ? $errors['content'] : ''; ?></span>
+			<?= Form::textarea('description', $post['description'], array('placeholder'=>'вкусно очень', 'id'=>'description')); ?>
+			<span class="help-inline"><?= isset($errors['description']) ? $errors['description'] : ''; ?></span>
 		</div>
 	</div>
 	<div class="control-group">

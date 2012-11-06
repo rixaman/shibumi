@@ -138,11 +138,17 @@ Route::set('catalog', 'catalog')
             'controller' => 'page',
             'action'     => 'catalog',
 	));
-Route::set('add_item', 'admin/page/create')
+Route::set('create_item', 'admin/page/create')
 	->defaults(array(
     		'directory'  => 'admin',
             'controller' => 'page',
             'action'     => 'create',
+	));
+Route::set('edit_item', 'admin/page/edit')
+	->defaults(array(
+    		'directory'  => 'admin',
+            'controller' => 'page',
+            'action'     => 'edit',
 	));
 Route::set('items', 'admin/items')
 	->defaults(array(

@@ -14,6 +14,8 @@
 		</div>
 		<div class="span4">
 		  <div class="alert alert-info focus-shadow">
+		    <a class="close">×</a>
+		  	<h3>Горячая линия:</h3>
 		  	 <p><?= $phones; ?></p>
 		  </div>
 		</div>

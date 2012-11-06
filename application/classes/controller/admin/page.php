@@ -26,6 +26,32 @@ class Controller_Admin_Page extends Controller_Admin_Admin{
 		$this->template->content = $content;
 	}
 
+	public function action_edit()
+	{
+		$item = ORM::factory('item')->where('title', '=', 'Халава')->find();
+
+		if($this->request->method() == 'POST')
+		{
+			$item = ORM::factory('item')
+				->values($this->request->post());
+			$item->image = '/public/img/stuff/a1.jpg';
+			$item->save();
+		}
+
+		$post['title'] = $item->title;
+		$post['price'] = $item->price;
+		$post['description'] = $item->description;
+
+		$content = View::factory('admin/item_edit')
+			->bind('post', $post)
+			->bind('errors', $errors);
+
+		$this->template->title = $item->title;
+		$this->template->navigation->active = 'edit';
+		$this->template->content = $content; 		
+	}
+
+
 	// вывод списка каталога по копипасту с основного временно
 	public function action_items()
 	{

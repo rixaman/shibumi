@@ -5,7 +5,7 @@ class Controller_Admin_Admin extends Controller_Common{
 	{
 		// подмена меню на админское
 		parent::before();
-			$navigation = View::factory('admin/navigation')
+		$navigation = View::factory('admin/navigation')
 			->bind('brand', $brand)
 			->bind('active', $active);
 		$brand = "Админка";

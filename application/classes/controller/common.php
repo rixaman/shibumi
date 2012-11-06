@@ -25,7 +25,7 @@ abstract class Controller_Common extends Controller_Template {
 
 		$marketing = $marketing->where('name', '=', 'health')->find()->description;
 
-		$phones = $phones->where('name', '=', 'about')->find()->description;
+		$phones = $phones->where('name', '=', 'phones')->find()->description;
 
 		$footer = View::factory('footer')
 			->bind('address', $address)

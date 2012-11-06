@@ -28,13 +28,11 @@ class Controller_Admin_Page extends Controller_Admin_Admin{
 
 	public function action_edit()
 	{
-		$item = ORM::factory('item')->where('title', '=', 'Халава')->find();
+		$item = ORM::factory('item')->where('id', '=', '1')->find();
 
 		if($this->request->method() == 'POST')
 		{
-			$item = ORM::factory('item')
-				->values($this->request->post());
-			$item->image = '/public/img/stuff/a1.jpg';
+			$item = $item->values($this->request->post());
 			$item->save();
 		}
 

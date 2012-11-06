@@ -1,2 +1,16 @@
 html {
 }
+
+.alert {
+	height: 200px;
+	border-color: rgb(43, 88, 122);
+}
+
+footer .vk {
+	position: relative;
+}
+#vk_groups iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+}

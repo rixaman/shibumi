@@ -54,16 +54,12 @@ class Controller_Page extends Controller_Common {
 
 	public function action_contacts()
 	{
-		$page = ORM::factory('page');
-		$page->where('name', '=', 'contacts')->find();
-		$title = $page->title;
-		$description = $page->description;
+		//отдельный вид страницы, контакты
 
-		$this->template->title = $title;
-		$this->template->navigation->active = $page->name;
+		$this->template->title = 'Контакты';
+		$this->template->navigation->active = 'contacts';
 
-		$content = View::factory('page')
-			->bind('description', $description);
+		$content = View::factory('contacts');
 		$this->template->content = $content; 	
 	}
 } // End Welcome

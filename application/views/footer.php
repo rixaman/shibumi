@@ -1,20 +1,19 @@
 <section id="miscellaneous">
 	<div class="row">
 		<div class="span4">
-			<div class="alert vk focus-shadow">
-				<div id="vk_groups"></div>
-				<script type="text/javascript" src="//vk.com/js/api/openapi.js"></script>
-				<!-- VK Widget -->
-				<script type="text/javascript">
-				VK.Widgets.Group("vk_groups", {mode: 0, width: "298", height: "200"}, 42669816);
-				</script>				
-			</div>
+		  <div class="alert focus-shadow">
+		    <a class="close">×</a>
+		  	<h3>Горячая линия:</h3>
+		  	 <p><?= $phones; ?></p>
+		  	<h3>Наш адрес:</h3>
+		  	 <p><?= $address; ?></p>
+		  </div>
 		</div>
 		<div class="span8">
 		  <div class="alert alert-info focus-shadow">
 		    <a class="close">×</a>
-		  	<h3>Горячая линия:</h3>
-		  	 <p><?= $phones; ?></p>
+		  	<h3>Кое что интересное:</h3>
+		  	 <p><?= $marketing; ?></p>
 		  </div>
 		</div>
 	</div>

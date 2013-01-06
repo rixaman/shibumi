@@ -38,8 +38,15 @@ abstract class Controller_Common extends Controller_Template {
 		$bootstrap = Less::compile('bootstrap');
 
 		
-		//стили и скрипты
+		//стили
 		$this->template->styles = array($bootstrap, '/public/css/styles.css');
-        $this->template->scripts = array('/public/js/jquery-1.8.2.min.js', '/public/js/bootstrap-carousel.js', '/public/js/scripts.js');
+		
+        $this->template->scripts = array(
+        	'/public/js/jquery-1.8.2.min.js', 
+        	//'//vk.com/js/api/openapi.js', 
+        	'http://api-maps.yandex.ru/2.0-stable/?lang=ru-RU&coordorder=longlat&load=package.full&wizard=constructor&onload=fid_135219974509787097091', 
+        	'/public/js/bootstrap-carousel.js', 
+        	'/public/js/scripts.js'
+        );
 	}
 }
